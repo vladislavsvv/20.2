@@ -1,0 +1,25 @@
+{% extends 'catalog/base.html' %}
+
+{% block content %}
+{% load my_tags %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">StoreProduct</h1>
+    <p class="lead">StoreProduct - это отличный магазин продуктов</p>
+</div>
+
+<div class="container">
+    <div class="row text-center">
+            {% for object_prod in object_list_prod %}
+                <div class="col-3">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-header" style="width: 100%;">
+                            <h4 class="my-0 font-weight-normal">{{ object_prod|title }}</h4>
+                            <img src="{% mediapath object_prod.image %}" style="width: 100%;"/>
+                            <a class="btn btn-lg btn-block btn-outline-primary" href="/product/">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+    </div>
+</div>
+{% endblock %}
