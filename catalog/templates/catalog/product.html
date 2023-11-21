@@ -3,8 +3,8 @@
 {% block content %}
 {% load my_tags %}
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">SkyStoreProduct</h1>
-    <p class="lead">SkyStoreProduct - это отличный магазин продуктов</p>
+    <h1 class="display-4">StoreProduct</h1>
+    <p class="lead">StoreProduct - это отличный магазин продуктов</p>
 </div>
 
 <div class="container">
@@ -19,7 +19,7 @@
                         <img src="/media/{{ object.image }}" style="width: 100%;"/>
                         <li> {{object_list_prod.0.image}} </li>
                         <li> {{object_list_prod.0.price}} рублей за кг </li>
-                        <li> ____________________________ </li>
+                        <li> _____________________ </li>
                         <li> Информация актуальна на </li>
                         <li> {{object_list_prod.0.last_modified_date}}</li>
                     </ul>
