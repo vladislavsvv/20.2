@@ -45,5 +45,5 @@ class Version(models.Model):
         return f'{self.product} {self.number_version}'
 
     class Meta:
-        verbose_name = 'Версию'
+        verbose_name = 'Версия'
         verbose_name_plural = 'Версии'
