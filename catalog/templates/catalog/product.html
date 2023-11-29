@@ -21,8 +21,7 @@
                         <li> ____________________________ </li>
                         <li> {{product.price}} рублей за кг </li>
                         <li> ____________________________ </li>
-                        <li> Информация актуальна на </li>
-                        <li> {{product.last_modified_date}}</li>
+                        <li> Информация актуальна на {{product.last_modified_date|default:'сегодняшний день'}}</li>
                         <li> Версия:</li>
                         {% for v in version %}
                             {{v.number_version}}
