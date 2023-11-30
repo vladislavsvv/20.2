@@ -25,8 +25,9 @@
                         <li> Версия:</li>
                         {% for v in version %}
                             {{v.number_version}}
-                            <li></li>
+                            </li>
                         {% endfor%}
+                        <li> Автор: {{object.user|default:'Не указан'}}</li>
                     </ul>
                     <button type="button" class="btn btn-lg btn-block btn-outline-primary">Купить</button>
                 </div>

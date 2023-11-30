@@ -21,8 +21,10 @@
                             <img src="{% mediapath product.image %}" style="width: 100%;"/>
                             <p class="card-text">{{ product.description|truncatechars:100 }}</p>
                             <a class="btn btn-lg btn-block btn-outline-primary" href="/product/{{ product.pk }}">Подробнее</a>
-                            <a class="btn btn-outline-primary" href="{% url 'catalog:update' product.pk %}">Редактировать</a>
-                            <a class="btn btn-outline-primary" href="{% url 'catalog:delete' product.pk %}">Удалить</a>
+                           {% if user.is_authenticated %}
+                                <a class="btn btn-outline-primary" href="{% url 'catalog:update' product.pk %}">Редактировать</a>
+                                <a class="btn btn-outline-primary" href="{% url 'catalog:delete' product.pk %}">Удалить</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
