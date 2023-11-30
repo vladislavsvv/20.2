@@ -28,6 +28,7 @@
                             </li>
                         {% endfor%}
                         <li> Автор: {{object.user|default:'Не указан'}}</li>
+                        <li>Опубликовано: {{product.is_published}} </li>
                     </ul>
                     <button type="button" class="btn btn-lg btn-block btn-outline-primary">Купить</button>
                 </div>

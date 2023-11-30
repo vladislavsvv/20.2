@@ -13,7 +13,7 @@ class StyleFormMixin:
 class ProductForm(StyleFormMixin, forms.ModelForm):
     class Meta:
         model = Product
-        fields = ('name', 'description', 'image', 'creation_data', 'price', 'category')
+        fields = ('name', 'description', 'image', 'creation_data', 'price', 'category', 'is_published')
 
     def clean_name(self):
         bad_words = ['казино', 'криптовалюта', 'крипта', 'биржа', 'дешево', 'бесплатно', 'обман', 'полиция', 'радар']
@@ -36,3 +36,9 @@ class VersionForm(forms.ModelForm):
     class Meta:
         model = Version
         fields = '__all__'
+
+
+class MProductForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = ('is_published', 'description', 'category')
