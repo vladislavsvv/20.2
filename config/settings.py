@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     'catalog',
     'blog',
-    'users'
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -141,10 +141,13 @@ AUTH_USER_MODEL = 'users.User'
 
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'vladislav.svintsitscky@yandex.ru'
-EMAIL_HOST_PASSWORD = 'mfjqhgnzjdxtknvm'
+EMAIL_HOST_USER = 'svintsitskiy.v@yandex.ru'
+EMAIL_HOST_PASSWORD = 'tutvpnwpyxddtadu'
 EMAIL_USE_SSL = True
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = '/users/'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+SERVER_EMAIL = EMAIL_HOST_USER
+EMAIL_ADMIN = EMAIL_HOST_USER
