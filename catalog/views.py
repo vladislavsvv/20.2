@@ -8,6 +8,8 @@ from catalog.forms import ProductForm, VersionForm, MProductForm
 from catalog.models import Product, Version
 from django.views.generic import DetailView, ListView, CreateView, UpdateView, DeleteView
 
+from catalog.services import cache_category
+
 
 class ProtectView(View):
     def get(self, *args, **kwargs):
@@ -50,6 +52,9 @@ class ProductCreateView(ProtectView, CreateView):
             new_product.save()
 
         return super().form_valid(form)
+
+    def get_queryset(self):
+        return cache_category()
 
 
 class ProductUpdateView(PermissionRequiredMixin, UpdateView):
